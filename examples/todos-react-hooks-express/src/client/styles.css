@@ -1,0 +1,12 @@
+.todoapp {
+  margin-top: 160px;
+}
+
+.todoapp h1 {
+  color: #3f7ab8;
+  font-size: 65px;
+}
+
+.todo-list li label {
+  font-weight: 300;
+}

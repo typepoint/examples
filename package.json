@@ -1,0 +1,18 @@
+{
+  "name": "@typeppoint/examples",
+  "private": true,
+  "author": "Ben <codeandcats@gmail.com> (https://github.com/codeandcats)",
+  "license": "SEE LICENSE IN LICENSE",
+  "contributors": [
+    "Ben <codeandcats@gmail.com> (https://github.com/codeandcats)",
+    "Laurence Dougal Myers (https://github.com/laurence-myers)"
+  ],
+  "workspaces": {
+    "packages": [
+      "examples/*"
+    ]
+  },
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
+}
