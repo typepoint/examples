@@ -9,7 +9,7 @@
   ],
   "workspaces": {
     "packages": [
-      "examples/*"
+      "todos-react-hooks-express"
     ]
   },
   "dependencies": {
