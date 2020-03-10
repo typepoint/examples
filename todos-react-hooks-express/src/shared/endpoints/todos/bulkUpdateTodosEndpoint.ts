@@ -1,6 +1,5 @@
 import * as jf from "joiful";
 import { defineEndpoint, Empty } from "@typepoint/shared";
-import { arrayOf } from "@typepoint/shared";
 
 export class BulkPatchTodoValues {
   @(jf.string().required())
@@ -10,7 +9,7 @@ export class BulkPatchTodoValues {
   completed!: boolean;
 }
 
-export const BulkPatchTodosRequestBody = arrayOf(BulkPatchTodoValues);
+export const BulkPatchTodosRequestBody = [BulkPatchTodoValues];
 
 export const bulkPatchTodosEndpoint = defineEndpoint({
   method: "patch",
