@@ -787,49 +787,51 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@typepoint/client@^2.0.1", "@typepoint/client@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@typepoint/client/-/client-2.0.6.tgz#38aadf583875eb431f98f3bae01328173a38518a"
-  integrity sha512-V95by8PXJ4027JGhx2tXeOc4vtVXQeeIe1XPwFHaZ5y7aNUaGMey/SNX876jNQaAlXR/yD7u3VnZqh2X32tLEg==
+"@typepoint/client@3.0.0", "@typepoint/client@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/client/-/client-3.0.0.tgz#dec24e5a0a7108a8f49a05be8ee77327fc68264a"
+  integrity sha512-RhXrL6voi+PSfitLhxIKb80CvWugejlnKft2hfN20uCVnUoGx1FoT6Ls6/eGJUEIdkYrXONKXal3NbqBff6m7g==
   dependencies:
-    "@typepoint/shared" "^2.0.5"
+    "@typepoint/shared" "3.0.0"
     axios "0.19.0"
 
-"@typepoint/express@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@typepoint/express/-/express-2.0.2.tgz#3c14b565ccbba3fe049e7fabdf5b5bd8caff0f9c"
-  integrity sha512-dyln0a5sB/xOQulaevW61sAepjGznxEpnAtvJQTTtmOBrD0UJEZG4wUMES6uMex+XaGWKjuP/HVF1vyYvmfl7A==
+"@typepoint/express@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/express/-/express-3.0.0.tgz#f9ae06b0cf7db2ff1722fe49be435d78329ec125"
+  integrity sha512-HDckOzhXpordqvEa77gE2Bixjd2/o4s1TckjqZdQKOhzgJTt4BQmYt2Jd4h5FmXacbsBrhkyqU+8mXEwYyuF9w==
   dependencies:
-    "@typepoint/shared" "^2.0.2"
+    "@typepoint/server" "3.0.0"
+    "@typepoint/shared" "3.0.0"
     clone "2.1.2"
     express "4.17.1"
     http-status-codes "1.3.2"
 
-"@typepoint/joiful@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@typepoint/joiful/-/joiful-2.0.2.tgz#b12021ef82a57f451e7ac29a87c4f2a6c411d1e6"
-  integrity sha512-gS/HuMwSO3KIH4oK5rmd+f/WXVBUTiokGvuKBj7aQT/65RE/iQHofeuljNfbR1ZRirWoEW5tDeBSJ0AyC52Tgg==
+"@typepoint/joiful@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/joiful/-/joiful-3.0.0.tgz#5f08cb3cce6c441e1a7687a60686c9736ccf22cd"
+  integrity sha512-0oFBmjxkm2Ed16bZcCM6W74b8IrV4LpeERd2OZYHGwCZq4ue88WOrBE3mcxemVfDRJX2OsNIAPchB/qOmdhe2A==
 
-"@typepoint/react@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@typepoint/react/-/react-1.0.0.tgz#75a3bc35362b9edb8900910175f8d9b1fd097c26"
-  integrity sha512-xOnJMUskcf4+79kyGzA9mAonmAtOVkbQbhhIJFpn1S8490RqXupW/c9+rcYN6ldDaGc4lKjIip8oA6kwWhlkRw==
+"@typepoint/react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/react/-/react-2.0.0.tgz#0edf26a5b9b47b01b3a2194893e7e9f4ac0164a7"
+  integrity sha512-uNyxOwIC3Iw673P7w3nkb/RVsargqNnAnsZa5D8mQq4pdtAtwXcTAb9f4MLLE3SCesI/39JDXe77FB1eeTdmrA==
   dependencies:
-    "@typepoint/client" "^2.0.1"
-    "@typepoint/shared" "^2.0.2"
+    "@typepoint/client" "3.0.0"
+    "@typepoint/shared" "3.0.0"
 
-"@typepoint/server@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@typepoint/server/-/server-1.0.0.tgz#67e8bd660fdf1a651d164afd395a359c93643274"
-  integrity sha512-vVphFriDCtxO4DxCbogr6r0Pe8UK8x8BrQ3Rec2ggBc7aaWapWUVDRyt/9zxsWhQXu6MAebYo8jhNs8D8NYMZA==
+"@typepoint/server@3.0.0", "@typepoint/server@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/server/-/server-3.0.0.tgz#1821a780e741bfe44726be141c77e8edcbbd5c7c"
+  integrity sha512-b+T6Wa/w2YIiSQ7TbPsEibJgs3Sss3Py+ya4IsTijDNGPL4Txll7Ezs7dhLiJS+k1uvsnVrOe8e+cAJP+L7svA==
   dependencies:
-    "@typepoint/shared" "^2.0.0"
+    "@typepoint/shared" "3.0.0"
+    clone "2.1.2"
     http-status-codes "1.3.2"
 
-"@typepoint/shared@^2.0.0", "@typepoint/shared@^2.0.2", "@typepoint/shared@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@typepoint/shared/-/shared-2.0.5.tgz#83cc70259e2333f4afa05839adcdd95d8914769b"
-  integrity sha512-8LyDqV/H7UTpvvVnVIOi6D8ExQePQfKZ6Q1u67hc2OkyUXnIs4IG+1lacl6/NznIU+oTeQ+hMG05GOC1AGLTfw==
+"@typepoint/shared@3.0.0", "@typepoint/shared@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@typepoint/shared/-/shared-3.0.0.tgz#cfb07c84162fe453e2804e5032ea08b48529148b"
+  integrity sha512-XM0JH0DtRQTK6pLalgRRM1qX7fjqjdjhBnVQ3gHF6s/zRUCXcQT6/8j1gbcZuiQpl234bIZ0IjPJJA0IGrL5yg==
 
 "@types/body-parser@*", "@types/body-parser@^1.17.1":
   version "1.17.1"
@@ -6182,10 +6184,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
-  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
+typescript@^3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
+  integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
 
 uncss@^0.17.2:
   version "0.17.2"
