@@ -1,8 +1,8 @@
+import chalk from "chalk";
 import {
   addHeadersMiddleware,
   createMiddleware,
-  notFoundMiddleware,
-  Router
+  Router,
 } from "@typepoint/server";
 import { getValidateAndTransformFunction } from "@typepoint/joiful";
 import { addTodoHandler } from "./todos/addTodoHandler";
@@ -23,14 +23,27 @@ export const router = new Router({
     getTodoHandler,
     getTodosHandler,
     updateTodoHandler,
-    patchTodoHandler
+    patchTodoHandler,
   ],
   middleware: [
-    notFoundMiddleware(),
+    createMiddleware(async ({ request }, next) => {
+      if (request.url.startsWith("/api/")) {
+        await next();
+      }
+    }, "ApiFilterMiddleware"),
+    createMiddleware(async ({ request }, next) => {
+      console.log(`${request.method}: ${chalk.yellow(request.url)}`);
+      try {
+        await next();
+      } catch (err) {
+        console.error(chalk.red(String(err) || err.message));
+        throw err;
+      }
+    }, "LoggerMiddleware"),
     addHeadersMiddleware({
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers":
-        "Origin, X-Requested-With, Content-Type, Accept"
+        "Origin, X-Requested-With, Content-Type, Accept",
     }),
     createMiddleware(async ({ request, response }, next) => {
       if (request.method.toLowerCase() === "options") {
@@ -47,7 +60,7 @@ export const router = new Router({
         return;
       }
       await next();
-    }, "OptionsMiddleware")
+    }, "OptionsMiddleware"),
   ],
-  validateAndTransform: getValidateAndTransformFunction()
+  validateAndTransform: getValidateAndTransformFunction(),
 });

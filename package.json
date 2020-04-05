@@ -7,12 +7,17 @@
     "Ben <codeandcats@gmail.com> (https://github.com/codeandcats)",
     "Laurence Dougal Myers (https://github.com/laurence-myers)"
   ],
+  "scripts": {
+    "clean-node-modules": "rm -rf ./node_modules && rm -rf ./todos-nextjs/node_modules && rm -rf ./todos-react-hooks-express/node-modules"
+  },
   "workspaces": {
     "packages": [
-      "todos-react-hooks-express"
+      "todos-react-hooks-express",
+      "todos-nextjs"
     ]
   },
   "dependencies": {
+    "net": "^1.0.2",
     "typescript": "^3.8.3"
   }
 }
