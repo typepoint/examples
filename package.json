@@ -9,10 +9,12 @@
   ],
   "workspaces": {
     "packages": [
-      "todos-react-hooks-express"
+      "todos-react-hooks-express",
+      "todos-nextjs"
     ]
   },
   "dependencies": {
+    "net": "^1.0.2",
     "typescript": "^3.8.3"
   }
 }
