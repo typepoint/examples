@@ -93,7 +93,7 @@ const TodoListItem = memo(({
     <li className={editing ? 'editing' : ''}>
       <div className="view">
         <input className="toggle" type="checkbox" checked={todo.completed} onChange={toggleTodo} />
-        <label onDoubleClick={enterEditMode}>{todo.title}</label>
+        <label onClick={enterEditMode}>{todo.title}</label>
         <button type="button" className="destroy" onClick={deleteTodo} />
       </div>
       <input

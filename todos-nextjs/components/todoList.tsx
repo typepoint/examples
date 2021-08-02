@@ -111,7 +111,7 @@ const TodoListItem = memo(
             checked={todo.completed}
             onChange={toggleTodo}
           />
-          <label onDoubleClick={enterEditMode}>{todo.title}</label>
+          <label onClick={enterEditMode}>{todo.title}</label>
           <button type="button" className="destroy" onClick={deleteTodo} />
         </div>
         <input
