@@ -8,5 +8,10 @@
 }
 
 .todo-list li label {
+  cursor: pointer;
   font-weight: 300;
+}
+
+button, input[type="checkbox"] {
+  cursor: pointer;
 }

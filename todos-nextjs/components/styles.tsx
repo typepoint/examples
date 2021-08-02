@@ -10,6 +10,7 @@ const Styles = () => {
       }
 
       button {
+        cursor: pointer;
         margin: 0;
         padding: 0;
         border: 0;
@@ -392,7 +393,12 @@ const Styles = () => {
       }
 
       .todo-list li label {
+        cursor: pointer;
         font-weight: 300;
+      }
+
+      input[type="checkbox"] {
+        cursor: pointer;
       }
     `}</style>
   );
