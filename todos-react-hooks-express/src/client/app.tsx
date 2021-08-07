@@ -11,18 +11,18 @@ import { patchTodoEndpoint } from '../shared/endpoints/todos/patchTodoEndpoint';
 import { clearCompletedTodosEndpoint } from '../shared/endpoints/todos/clearCompletedTodosEndpoint';
 import { bulkPatchTodosEndpoint } from '../shared/endpoints/todos/bulkUpdateTodosEndpoint';
 
-const {
-  memo, useCallback, useState, useMemo,
-} = React;
+const { useCallback, useState, useMemo } = React;
 
 const noop = () => {};
 
-export const App = memo(() => {
+export const App: React.FC = () => {
+  console.log('App:1')
   const { response, refetch } = useEndpoint(getTodosEndpoint, {});
   const todos = (response && response.body) || [];
 
   const [filterType, setFilterType] = useState('all' as FilterType);
 
+  console.log('App:2')
   const visibleTodos = useMemo(() => filterTodos(todos, filterType), [filterType, todos]);
 
   const { fetch: addTodo } = useEndpointLazily(addTodoEndpoint);
@@ -31,6 +31,7 @@ export const App = memo(() => {
       .promise()
       .then(refetch, noop);
   }, [addTodo, refetch]);
+  console.log('App:3')
 
   const { fetch: clearCompletedTodos } = useEndpointLazily(clearCompletedTodosEndpoint);
   const clearCompletedAndRefetch = useCallback(async () => {
@@ -38,6 +39,7 @@ export const App = memo(() => {
       .promise()
       .then(refetch, noop);
   }, [clearCompletedTodos, refetch]);
+  console.log('App:4')
 
   const { fetch: deleteTodo } = useEndpointLazily(deleteTodoEndpoint);
   const deleteTodoById = useCallback((id: string) => {
@@ -45,6 +47,7 @@ export const App = memo(() => {
       .promise()
       .then(refetch, noop);
   }, [deleteTodo, refetch]);
+  console.log('App:5')
 
   const { fetch: patchTodo } = useEndpointLazily(patchTodoEndpoint);
   const setTodoTitle = useCallback((id: string, title: string) => {
@@ -52,12 +55,14 @@ export const App = memo(() => {
       .promise()
       .then(refetch, noop);
   }, [patchTodo, refetch]);
+  console.log('App:6')
 
   const toggleTodo = useCallback((id: string, completed: boolean) => {
     patchTodo({ params: { id }, body: { completed } })
       .promise()
       .then(refetch, noop);
   }, [patchTodo, refetch]);
+  console.log('App:7')
 
   const { fetch: bulkPatchTodos } = useEndpointLazily(bulkPatchTodosEndpoint);
   const toggleAll = useCallback(async () => {
@@ -68,6 +73,7 @@ export const App = memo(() => {
       .promise()
       .then(refetch, noop);
   }, [bulkPatchTodos, refetch, todos]);
+  console.log('App:8')
 
   return (
     <section className="todoapp">
@@ -89,4 +95,4 @@ export const App = memo(() => {
       </div>
     </section>
   );
-});
+};

@@ -19,12 +19,7 @@ async function initialize() {
   const nextRequestHandler = nextApp.getRequestHandler();
   expressApp.get("*", (req, res) => nextRequestHandler(req, res));
 
-  expressApp.listen(port, (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-
+  expressApp.listen(port, () => {
     console.log(
       `> Server listening at http://localhost:${port} as ${
         dev ? "development" : process.env.NODE_ENV

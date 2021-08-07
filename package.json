@@ -2,7 +2,7 @@
   "name": "@typeppoint/examples",
   "private": true,
   "author": "Ben <codeandcats@gmail.com> (https://github.com/codeandcats)",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "ISC",
   "contributors": [
     "Ben <codeandcats@gmail.com> (https://github.com/codeandcats)",
     "Laurence Dougal Myers (https://github.com/laurence-myers)"
@@ -14,10 +14,9 @@
     "packages": [
       "todos-react-hooks-express",
       "todos-nextjs"
+    ],
+    "nohoist": [
+      "**/**"
     ]
-  },
-  "dependencies": {
-    "net": "^1.0.2",
-    "typescript": "^3.8.3"
   }
 }
